@@ -15,6 +15,7 @@ public class Car {
         // Gas tank level defaults to a full tank
         this.gasTankLevel = gasTankSize;
         this.milesPerGallon = milesPerGallon;
+
     }
 
     public String getMake() {
@@ -60,7 +61,9 @@ public class Car {
     public double getOdometer() {
         return odometer;
     }
-
+    public void addGas(double gas){
+        this.setGasTankLevel(gas + this.getGasTankLevel());
+    }
     /**
      * Drive the car an amount of miles. If not enough fuel, drive as far as fuel allows.
      * Adjust fuel levels based on amount needed to drive the distance requested.
@@ -82,6 +85,7 @@ public class Car {
         double gallonsUsed = milesAbleToTravel / this.milesPerGallon;
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
+
     }
 
 }

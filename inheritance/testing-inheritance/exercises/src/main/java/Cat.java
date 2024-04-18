@@ -48,6 +48,7 @@ public class Cat {
         tired = false;
         hungry = true;
     }
+   
 
     // Eating makes a cat not hungry
     public void eat() {

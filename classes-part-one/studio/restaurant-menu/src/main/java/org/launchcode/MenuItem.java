@@ -13,6 +13,7 @@ public class MenuItem {
         this.description = description;
         this.category = category;
         this.date = LocalDate.now();
+
     }
     public void setDish(String dish){
         this.dish = dish;
@@ -38,9 +39,18 @@ public class MenuItem {
     public String getCategory(){
         return category;
     }
+
+    public void setDate(LocalDate date){
+        this.date = date;
+    }
     public LocalDate getDate(){
         return date;
     }
+    public String toString(){
+        return "Price: " + price + ", " + "Dish: " + dish + ", " + description;
+    }
 }
+
+
 
 
